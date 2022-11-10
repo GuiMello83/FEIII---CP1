@@ -2,11 +2,15 @@
 
 export function Card (props) {
 
+
   return (
-    <div className="card">
-    <h1>{props.productData.name}</h1>
-    <span> {props.productData.cor}</span>
-</div>
+    <div className="card" style={{backgroundColor:props.data.cor}} >
+     
+        <h1>{props.data.name}</h1>
+        <span> {props.data.cor}</span>
+    
+    </div>
+   
   )
 }
 

@@ -1,30 +1,76 @@
-.dark-theme {
-
-    background-color: red;
-
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
 }
 
-.form-error{
-    background-color: red;
-}
-
-.teste {
+.body {
 
     width: 100%;
-    max-width: 1200px;
-    margin: 50px auto;
+    height: 100%;
+    color: #fff;
+    background-color: #151515;
+    margin: 0;
 
-    &>h1 {
 
-        margin-bottom: 32px;
+    .form{
+        width: 1200px;
+        height: 309px;
+        top: 84px;
+        border-radius: 12px;
+        background-color: #202020;
+        display: grid;
+        flex-direction: column;
+        
+        
+        .form-error{
+            background-color: rgb(236, 144, 144);
+            width: auto;
+            border-color: red;
+
+        }
+        input{
+            width:300px;
+            height:35px;
+            border-radius: 15px;
+
+        }
+    
+    }
+
+    button {
+
+        padding: 1rem;
+        font-family: inherit;
+        font-weight: bold;
+        font-size: 1rem;
+        background-color: rgb(105, 194, 105);
+        margin-top: 0.5rem;
+        border: 2px solid #000000;
+        border-radius: 4px;
+        transition: .2s ease-in-out; 
+
+  
+
+        &:hover {
+
+            filter: brightness(120%);
+            cursor: pointer;
+
+        }
 
     }
 
-    &>button {
+    .card
+        {
+            width: 424px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding: 12px;
+            border-radius: 12px;
 
-        color: black;
-        padding: 4px;
-        margin-right: 12px;
 
     }
 
@@ -32,13 +78,13 @@
 
         display: flex;
         justify-content: space-between;
-        margin-bottom: 42px;
+        margin-bottom: 15px;
 
         button {
 
             font-size: 16px;
             background-color: rgb(105, 194, 105);
-            padding: 12px 24px;
+            padding: 52px 24px;
             border: none;
             border-radius: 4px;
             transition: .2s ease-in-out;
@@ -51,16 +97,14 @@
             }
 
         }
+       
 
     }
 
-    .colors {
-
-        display: flex;
-        // justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 42px;
-
-    }
+    
 
 }
+
+
+
+

@@ -1,6 +1,9 @@
 import { useState } from 'react'
-import './style.scss'
-import { Card } from "./Card"
+import './style2.scss'
+import { Cards } from "./Card"
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+
 // Aqui você irá escrever as suas funções de Validação, para verificar se o Formulário foi preenchido corretamente
 
 function App() {
@@ -35,11 +38,13 @@ function App() {
   }
 
   return (
+    <body>
     <main className="body">
-      <div className="form">
+   
+      
         <h1 className="tittle">Adicione aqui sua cor</h1>
-        
-        <section className="formflex">
+        <div className="form">
+        <paper elevation={3} className="formflex">
           <form className={formularioErro ? 'form-error' : 'formInputs'} onSubmit={event => cadastrarCor(event)}>
             <div className="1label">
               <label className="tittle-wrapper" htmlFor="nomeCor">Nome da cor: </label>
@@ -47,22 +52,23 @@ function App() {
             </div>
             <div className="2label">
               <label className="tittle-wrapper" input="cores">Cor (Hexadecimal): </label>
-              <input id="cores" type="color" value={cores} onChange={event => setCores(event.target.value)} />
+              <input type="color" value={cores} onChange={event => setCores(event.target.value)} />
             </div>
-            <button className="button" type='submit' onClick={(event) => cadastrarCor(event)}>Cadastrar</button>
+            <Button className="button" variant="contained" type='submit' onClick={(event) => cadastrarCor(event)}>Cadastrar</Button>
           </form>
           {formularioErro ? (
             <span>Necessário preencher todos os campos</span>
           ): null}
-        </section>
+        </paper>
       </div>
-      <section className='card'>
+      <div className="card" color="#ffff">
+      <section className='cards'>
         {
           allColors.map(
 
             color => {
               return (
-                <Card
+                <Cards
                   data={color}
                 />
               )
@@ -70,10 +76,14 @@ function App() {
           )
         }
       </section>
+      </div>
+   
     </main>
+    </body>
   )
 }
 
 export default App
+
 
 

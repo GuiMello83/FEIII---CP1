@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 1 px solid black;
+    /* background-color: #151515; */
+}
+
+body{
+    background-color: #151515; 
+    color: white;
+    margin: 10px;
+        .tittle{
+            padding: 10px 15px 15px 10px;
+        }
+
+}
+.form{
+    width: auto;
+    height: 150px; 
+    padding-top: 10px;
+    background-color: #202020; 
+    display: grid;
+    align-items: middle;
+    flex-direction: row;
+    border: 3px solid #555;
+    border-radius: 12px;
+
+    .formflex{
+        
+
+        .form-error{
+            background-color: rgb(236, 144, 144);
+            width: auto;
+            border-color: red;
+        }
+
+        .tittle-wrapper{
+            transition: width 0.4s ease-in-out;
+            border: 3px;
+        }
+    }
+}
+.card{
+    background-color: #151515;
+    color: white;
+}
